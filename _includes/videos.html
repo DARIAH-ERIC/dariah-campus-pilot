@@ -58,7 +58,7 @@
                     <a class="uk-position-cover" href="{{ item.url }}" data-caption="{{ item.title }}"></a>
                     {%- if item.img -%}
                     <div class="uk-card-media-top">
-                      <img src="{{item.img | relative_url}}" alt="">
+                      <img data-src="{{item.img | relative_url}}" alt="" uk-img>
                     </div>
                     {%- endif -%}
                     {%- if item.img -%}
