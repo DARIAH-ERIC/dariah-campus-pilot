@@ -31,9 +31,9 @@
             <div>
                 <div class="uk-card uk-card-default uk-box-shadow-medium uk-card-hover uk-card-body uk-inline border-radius-large border-xlight">
                     {% if navurl != '//' %}
-                      <a class="uk-position-cover" href="{{ navurl }}"></a>
+                      <a class="uk-position-cover" href="{{ navurl | relative_url }}"></a>
                     {% else %}
-                      <a class="uk-position-cover" href="{{ doc.url }}"></a>
+                      <a class="uk-position-cover" href="{{ doc.url | relative_url }}"></a>
                     {% endif %}
 
 
