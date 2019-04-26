@@ -6,7 +6,7 @@
 
 # Site title and description
 title:              DARIAH Campus
-description:        Documentation Jekyll theme.
+description:        Collecting and Consolidating DARIAH Learning Resources
 lang:               en
 
 # Site subpath, e.g. /blog
@@ -16,7 +16,7 @@ baseurl:            ""
 permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
-url:                "https://docs.jekyll.plus"
+url:                "https://dariah-eric.github.io/dariah-campus/"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               dariah-campus.png
