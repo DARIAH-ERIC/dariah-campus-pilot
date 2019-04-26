@@ -3,7 +3,7 @@ layout: events
 title: Open Data Citation for Social Science and Humanities
 abstract: DARIAH Winter School 2016 explored the evolution of publication issues in social sciences and humanities in a context of Open Access, with the underlying goal of promoting open science through the question of open data citation.
 data_key: ws2016
-tags: open_science open_access scientific_publishing data_management
+tags: open_science open_access scholarly_publishing data_management
 
 ---
 
