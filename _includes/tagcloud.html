@@ -6,7 +6,8 @@
 
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <a class="uk-button uk-button-primary uk-button-small" href="/tags/{{ this_word | cgi_escape }}">{{ this_word | replace:'_', ' ' }} <sup>{{ site.tags[this_word].size }}</sup></a>
+    {% assign href = "/tags/"{{ this_word | cgi_escape }} %}
+    <a class="uk-button uk-button-primary uk-button-small" href="{{href | relative_url}}">{{ this_word | replace:'_', ' ' }} <sup>{{ site.tags[this_word].size }}</sup></a>
   {% endunless %}{% endfor %}
 
 </p>

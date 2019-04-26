@@ -3,8 +3,8 @@
 - title: Home
   url: /
 
-- title: About
-  url: /docs/disclaimer/
+# title: About
+# url: /docs/disclaimer/
 
 - title: Resources
   url: /resources/
