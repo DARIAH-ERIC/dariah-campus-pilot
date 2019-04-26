@@ -13,7 +13,9 @@ hero:
 
 {% include faqs.html multiple="true" title="Frequently asked questions" category="presale" subtitle="Time is precicious, we know." %}
 
-<!-- {% include featured.html tag="featured" title="Popular Articles" subtitle="Selected featured articles to get you started fast in Jekyll" %} -->
+{% comment %}
+{% include featured.html tag="featured" title="Popular Articles" subtitle="Selected featured articles to get you started fast in Jekyll" %}
+{% endcomment %}
 
 {% include videos.html columns="3" source=site.data.desir-videos title="Why training and education?" subtitle="Some thoughts on why training and education matter so much for a research infrastructure such as DARIAH." %}
 

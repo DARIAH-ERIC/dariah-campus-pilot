@@ -10,7 +10,7 @@ tags: open_science open_access scientific_publishing data_management
 {% assign bg_image = site.data.events.ws2016.bg_image %}
 <div class="home">
 
-    <div class="home__background" style="background-image: url({{bg_image}});"></div><!-- /.home__background -->
+    <div class="home__background" style="background-image: url({{bg_image | relative_url}});"></div><!-- /.home__background -->
 
     <div class="home__wrapper-1">
 

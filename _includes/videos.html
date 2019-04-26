@@ -1,7 +1,7 @@
-
-
-<!-- this is for pages that get videos from the front matter-->
-<!-- todo: what if we want to include a data source inside a post? -->
+{%- comment %}
+this is for pages that get videos from the front matter
+todo: what if we want to include a data source inside a post?
+{% endcomment -%}
 
 {%- if page.videos -%}
     {% assign videos = page.videos %}
@@ -21,7 +21,10 @@
         {% endif %}
 {% else %}
 {%- endif -%}
-<!-- this is for pages that get videos from a data source-->
+{%- comment %}
+	this is for pages that get videos from a data source-
+{% endcomment -%}
+
 {%- if include.source -%}
   {% assign videos = include.source %}
   {% assign section = "uk-section section-videos" %}
