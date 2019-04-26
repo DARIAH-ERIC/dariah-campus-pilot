@@ -9,7 +9,7 @@ hero:
     search: true
 ---
 
-{% include boxes.html columns="3" title="Browse Topics" subtitle="Chose an option that you need help with or search above" %}
+{% include boxes.html columns="3" title="Browse content" subtitle="Chose a category to browse or search above" %}
 
 {% include faqs.html multiple="true" title="Frequently asked questions" category="presale" subtitle="Time is precicious, we know." %}
 
