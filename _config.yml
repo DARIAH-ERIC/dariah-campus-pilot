@@ -17,6 +17,7 @@ permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                "https://dariah-eric.github.io/dariah-campus"
+baseurl:            "https://dariah-eric.github.io/dariah-campus"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               dariah-campus.png
