@@ -1,0 +1,20 @@
+- name: dariahTeach
+  descr: "#dariahTeach is an open source, multilingual, community-driven platform for high quality teaching and training materials for the digital arts and humanities."
+  img: ../../uploads/sources/dariahTeach5.jpg
+  canvas_width: 600
+  canvas_height: 475
+- name: DESIR
+  descr: "The H2020-funded project DESIR sets out to strengthen the sustainability of DARIAH and firmly establish it as a long-term leader and partner within arts and humanities communities."
+  img: ../../uploads/sources/desir.jpg
+  canvas_width: 600
+  canvas_height: 475
+- name: Parthenos
+  descr: Training modules and resources for researchers, educators, managers, and policy makers who want to learn more about research infrastructures and the issues and methods around them.
+  img: ../../uploads/sources/parthenos8.jpg
+  canvas_width: 900
+  canvas_height: 712
+- name: Events
+  descr: DARIAH conducts face-to-face training measures as well. Here we'll try to capture some of those events for the benefit of those who couldn't attend them.
+  img: ../../uploads/sources/events.jpg
+  canvas_width: 640
+  canvas_height: 507

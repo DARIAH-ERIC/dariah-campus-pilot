@@ -1,0 +1,18 @@
+# Changelog page source
+
+- title: Version 0.5.1
+  label: Alpha
+  date: April 26, 2019
+  list:
+  - Moved to GitHub
+  - Fixed video data sources and presentation
+  - Added temp solution for multiword tags
+
+- title: Version 0.5.0
+  label: Alpha
+  date: April 19, 2019
+  list:
+  - Initial design
+  - Implemented combined search over posts and pages
+  - Added categories and category pages
+  - Added tags and tag pages

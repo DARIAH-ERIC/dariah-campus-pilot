@@ -1,0 +1,71 @@
+---
+layout: null
+---
+
+<!doctype html>
+<!--[if lt IE 9]><html class="old-ie" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.">
+    <meta name="keywords" content="Dariah, Winter School">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dariah Winter School › An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/base.css">
+
+    <script type="text/javascript">
+        var init = function(){
+
+            var htmlTag = document.getElementsByTagName('html')[0];
+
+            // Is JS enabled?
+            htmlTag.className = (htmlTag.className + ' ' || '') + 'hasJS';
+
+            // Is it a touch device?
+            if ('ontouchstart' in document.documentElement)
+                htmlTag.className = (htmlTag.className + ' ' || '') + 'isTouch';
+            else htmlTag.className = (htmlTag.className + ' ' || '') + 'noTouch';
+
+            // Is SVG supported?
+            if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1"))
+                htmlTag.className = (htmlTag.className + ' ' || '') + 'svg';
+            else
+                htmlTag.className = (htmlTag.className + ' ' || '') + 'no-svg';
+        }();
+    </script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../static/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../static/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../static/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../static/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../static/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../static/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../static/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="../static/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../static/img/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="../static/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="../static/img/favicon/manifest.json">
+    <link rel="shortcut icon" href="../static/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../static/img/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="../static/img/favicon/browserconfig.xml">
+
+</head>
+
+<body>
+
+    {{ content }}
+
+    <script type="text/javascript" src="../vendor/jquery-1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="../vendor/jquery-throttle-1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="../assets/js/base.js"></script>
+
+    <script async defer src="https://hypothes.is/embed.js"></script>
+
+</body>
+</html>

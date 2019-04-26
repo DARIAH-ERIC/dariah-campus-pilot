@@ -1,0 +1,28 @@
+<div class="uk-margin-medium-top section-videos">
+  <div class="uk-container-small">
+    <div class="uk-child-width-1-{{ page.columns }}@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
+      {% for video in page.videos %}
+      <div>
+        <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
+          <a class="uk-position-cover lightbox" href="{{ video.url }}" data-uk-lightbox></a>
+
+          {%- if video.img -%}
+          <div class="uk-card-media-top">
+            <img src="{{video.img}}" alt="">
+          </div>
+          {%- endif -%}
+
+          <div class="uk-card uk-card-body">
+
+            <span data-uk-icon="icon: play-circle; ratio: 2.4" class=""></span>
+            <h3 class="uk-card-title uk-margin">{{ video.title }}</h3>
+            {% if video.desc %}
+            <p>{{ video.desc }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

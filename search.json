@@ -1,0 +1,18 @@
+---
+layout: null
+---
+
+
+
+[
+  {% assign everything = site.docs | concat: site.posts   %}
+  {% for doc in everything %}
+    {
+      "title"    : "{{ doc.title | escape }}",
+      "category" : "{{ doc.category }}",
+      "tags"     : "{{ doc.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ doc.url }}",
+      "date"     : "{{ doc.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

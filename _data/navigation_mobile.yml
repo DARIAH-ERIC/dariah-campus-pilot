@@ -1,0 +1,23 @@
+# Mobile menu navigation links
+
+- title: Home
+  url: /
+
+- title: About
+  url: /docs/disclaimer/
+
+- title: Resources
+  url: /resources/
+
+- title: Topics
+  url: /topics/
+
+- title: Sources
+  url: /sources/
+
+- title: Changelog
+  url: /changelog-timeline/
+
+- title: Contact
+  url: https://www.dariah.eu/helpdesk/
+  button: success

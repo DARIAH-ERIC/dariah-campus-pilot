@@ -1,0 +1,152 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site title and description
+title:              DARIAH Campus
+description:        Documentation Jekyll theme.
+lang:               en
+
+# Site subpath, e.g. /blog
+baseurl:            ""
+
+# Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
+permalink:          /:title/
+
+# Site base hostname & protocol, e.g. http://example.com
+url:                "https://docs.jekyll.plus"
+
+# Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
+logo:               dariah-campus.png
+
+navbar:
+    sticky:         true
+    search:         true
+
+# Default author settings
+author:
+    name:           DARIAH Campus
+    title:          Editor
+    avatar:         dariah-campus-icon3.png
+
+# Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
+authors:
+    toma:
+      name:         Toma Tasovac
+      title:        DARIAH Director
+      avatar:       authors/toma.jpg
+    debs:
+      name:         Deborah Thorpe
+      title:        Training & Education Officer
+      avatar:       authors/debs.jpg
+    erzsebet:
+      name:         Erzsébet Tóth-Czifra
+      title:        Open Science Officer
+      avatar:       authors/erzsebet.jpg
+    marco:
+      name:         Marco Raciti
+      title:        European Project Manager
+      avatar:       authors/marco.jpg
+
+
+
+
+# Social icons displayed in footer
+social:
+    email:          https://www.dariah.eu/helpdesk/
+    website:        https://www.dariah.eu
+    facebook:
+    flickr:         https://www.flickr.com/photos/142235661@N08/albums/with/72157695786965901
+    dribbble:
+    github:         https://github.com/DARIAH-ERIC
+    googleplus:
+    instagram:
+    linkedin:
+    pinterest:
+    twitter:        https://twitter.com/dariaheu
+    vimeo:
+    youtube:        https://www.youtube.com/channel/UCeQpM_gUvNZXUWf6qQ226GQ
+
+# Share button
+share:
+    post:           true # Display share buttons on a post page
+    doc:            true # Display share buttons on a doc page
+    twitter:        username # Enable by adding Twitter handle
+    facebook:       true # Enable by setting true (Facebook handle not required)
+
+# Default footer image settings
+footer:
+    copyright:      Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.
+
+# Disqus comments shortname, requires Disqus account https://disqus.com/
+disqus:
+    shortname:      # 1234
+
+# Google analytics code, get your code here https://www.google.com/analytics/
+google_analytics:
+
+# Number of posts displayed on blog page
+paginate:           10
+
+# Blog path
+paginate_path:      "/resources/:num/"
+
+# Path to post content assets directory i.e post images, pdfs etc
+uploads:            /uploads/
+
+# Build settings
+markdown:           kramdown
+highlighter:        rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-avatar
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+sass:
+  style:            compressed
+
+collections:
+  docs:
+    output:         true
+  faqs:
+    output:         false
+  changelogs:
+    output:         false
+  sources:
+    output:         true
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path:         ""
+      type:         posts
+    values:
+      layout:       post
+      type:         local
+      is_post:      true
+      button_text:  Go to this resource
+      teaser: Interested in learning more?
+      width:        xsmall
+
+  # _docs
+  - scope:
+      path:         ""
+      type:         docs
+    values:
+      layout:       doc
+
+  # _sources
+  - scope:
+      path:         ""
+      type:         sources
+    values:
+      layout:       sources

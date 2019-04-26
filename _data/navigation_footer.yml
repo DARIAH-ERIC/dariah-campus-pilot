@@ -1,0 +1,16 @@
+# Footer navigation links
+
+- title: Home
+  url: /
+
+- title: Resources
+  url: /resources/
+
+- title: Topics
+  url: /topics/
+
+- title: Sources
+  url: /sources/
+
+- title: Contact
+  url: https://www.dariah.eu/helpdesk/

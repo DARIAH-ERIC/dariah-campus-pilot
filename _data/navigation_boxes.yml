@@ -1,0 +1,16 @@
+# Boxes include navigation
+
+- title: DARIAH Resources
+  desc: Lean about different topics with online resources provided by DARIAH
+  icon: settings
+  nav: resources
+
+- title: DARIAH Events
+  desc: Missed a face-to-face DARIAH event? Check out what happened
+  icon: users
+  nav: events
+
+- title: DARIAH Collections
+  desc: Useful collections of external resources curated by the DARIAH team
+  icon: album
+  doc: installation
