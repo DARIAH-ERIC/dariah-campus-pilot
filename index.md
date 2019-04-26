@@ -21,6 +21,6 @@ hero:
 
 
 
-{% include team.html authors="debs, erzsebet, marco, toma" title="We are here to help" subtitle="DARIAH-CAMPUS team is just an email away and ready to answer your questions." %}
+{% include team.html authors="debs, erzsebet, marco, toma" title="We are here to help" subtitle="The DARIAH-CAMPUS team is just an email away and ready to answer your questions." %}
 
 {% include cta.html title="Didn't find an answer?" button_text="Contact Us" button_url="/contact/" subtitle="Get in touch with us for details on setup and additional custom services pricing" %}
