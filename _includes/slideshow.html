@@ -3,7 +3,7 @@
     <ul class="uk-slideshow-items">
         {% for image in site.uploads %}
             {% if image.path contains include.folder %}
-                <li><img src="{{ image.path }}" data-uk-cover></li>
+                <li><img data-src="{{ image.path }}" data-uk-cover uk-img></li>
             {% endif %}
         {% endfor %}
     </ul>

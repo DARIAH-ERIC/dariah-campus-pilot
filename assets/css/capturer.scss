@@ -1,0 +1,25 @@
+---
+# This collects all the files from for the DARIAH Capturer -- the stylesheets
+# used for styling our packages for face2face events. At the moment we'll do a # quick, hacky integration of the DARIAH-Campus frontend and the DARIAH
+# Capturer, but over time the two should become more closely integrated.
+---
+
+// System fonts
+@import "capturer/base";
+
+// Custom variables and variable overwrites.
+//@import "theme/variables";
+
+// Import default variables and available mixins.
+//@import "uikit/variables-theme";
+//@import "uikit/mixins-theme";
+
+// Custom mixin overwrites.
+//@import "theme/mixins";
+
+// Import UIkit.
+//@import "theme/uikit";
+
+// Other vendor styles
+// @import "syntax-highlighting/cld";
+//@import "syntax-highlighting/bw";
