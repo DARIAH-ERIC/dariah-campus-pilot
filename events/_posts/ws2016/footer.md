@@ -70,4 +70,22 @@
 
     <p class="footer__more">Humanities at Scale has received funding from the European’s Union Horizon 2020 Research and Innovation Program under Grant Agreement No 675570.</p>
 
+    <p class="footer__more">Except where otherwise noted, content on this site is licensed under a <a>CC-BY 4.0 International license.</a></p>
+
+
+    {%- comment %}
+        add to scss when design is finalized
+        incl. hover
+    {% endcomment -%}
+    <style>
+      .footer__more a {
+        display:inline;
+        color: inherit;
+      }
+      .footer__more a:hover {
+        color: #ED6F59;
+        transition-duration: 150ms;
+      }
+    </style>
+
 </div><!-- /#footer -->

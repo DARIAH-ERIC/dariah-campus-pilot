@@ -6,38 +6,37 @@ layout: null
 <!--[if lt IE 9]><html class="old-ie" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
+  <meta charset="utf-8">
+  <meta name="description" content="An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.">
+  <meta name="keywords" content="Dariah, Winter School">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="utf-8">
-    <meta name="description" content="An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.">
-    <meta name="keywords" content="Dariah, Winter School">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dariah Winter School › An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.</title>
 
-    <title>Dariah Winter School › An open access synthesis of the DARIAH Winter School Open Data Citation for Social Sciences and Humanities, 24th-28th October 2016, Prague, Czech Republic.</title>
+  <link rel="stylesheet" type="text/css" href="{{'/assets/css/capturer.css' | relative_url}}">
 
-    <link rel="stylesheet" type="text/css" href="{{'/assets/css/capturer.css' | relative_url}}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <script type="text/javascript">
+  var init = function(){
 
-    <script type="text/javascript">
-        var init = function(){
+    var htmlTag = document.getElementsByTagName('html')[0];
 
-            var htmlTag = document.getElementsByTagName('html')[0];
+    // Is JS enabled?
+    htmlTag.className = (htmlTag.className + ' ' || '') + 'hasJS';
 
-            // Is JS enabled?
-            htmlTag.className = (htmlTag.className + ' ' || '') + 'hasJS';
+    // Is it a touch device?
+    if ('ontouchstart' in document.documentElement)
+    htmlTag.className = (htmlTag.className + ' ' || '') + 'isTouch';
+    else htmlTag.className = (htmlTag.className + ' ' || '') + 'noTouch';
 
-            // Is it a touch device?
-            if ('ontouchstart' in document.documentElement)
-                htmlTag.className = (htmlTag.className + ' ' || '') + 'isTouch';
-            else htmlTag.className = (htmlTag.className + ' ' || '') + 'noTouch';
-
-            // Is SVG supported?
-            if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1"))
-                htmlTag.className = (htmlTag.className + ' ' || '') + 'svg';
-            else
-                htmlTag.className = (htmlTag.className + ' ' || '') + 'no-svg';
-        }();
-    </script>
+    // Is SVG supported?
+    if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1"))
+    htmlTag.className = (htmlTag.className + ' ' || '') + 'svg';
+    else
+    htmlTag.className = (htmlTag.className + ' ' || '') + 'no-svg';
+  }();
+  </script>
 
   {% include favicons.html %}
 
@@ -47,32 +46,62 @@ layout: null
 <body id="body">
 
 
-    {{ content }}
+  {% assign home = page.event_id | append: "/home.md" %}
+  {% include_relative {{home}} bg_image=page.home_image %}
 
-    {% assign about = "parts/" | append: page.data_key | append: "/about.md" %}
-    {% assign prep = "parts/" | append: page.data_key | append: "/prep.md" %}
+  <div class="body__borders">
 
-    {% include_relative {{about}} %}
-    {% include_relative {{prep}} %}
+    <div class="pos-r sticky-position-container">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha256-rsPUGdUPBXgalvIj4YKJrrUlmLXbOb6Cp7cdxn1qeUc=" crossorigin="anonymous"></script>
+      {% assign navigation = page.event_id | append: "/navigation.md" %}
+      {% include_relative {{navigation}}  %}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha256-+nuEu243+6BveXk5N+Vbr268G+4FHjUOEcfKaBqfPbc=" crossorigin="anonymous"></script>
+      {%- comment %}
+      	{{ content }}
+      {% endcomment -%}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js" integrity="sha256-JJgdoUCEwWBuvXW08W3EvBgfVEHoPt82Nje/+DXrDGs=" crossorigin="anonymous"></script>
+      {%- comment %}
+        What follows is an intermediate step
+        Still a lot of templating left to do
+      {% endcomment -%}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit-icons.min.js" integrity="sha256-yALuSP2vwUtflUpSb0dMHDdCaNUfaHHpY6+TKCYDxes=" crossorigin="anonymous"></script>
-
-    {%- comment %}
-    	base.min.js contains uikit stuff. this should be refactored so that
-      there is one load in both campus and capturer
-    {% endcomment -%}
-
-    <script type="text/javascript" src="{{'/assets/js/base.min.js' | relative_url}}"></script>
-
+      {%- for session in page.sessions -%}
+          {% include_relative {{page.event_id}}/sessions/{{session}}.md %}
+      {%- endfor -%}
 
 
-    <script async defer src="https://hypothes.is/embed.js"></script>
+
+    </div><!-- /.sticky-position-container -->
+
+    {% assign footer = page.event_id | append: "/footer.md" %}
+    {% include_relative {{footer}} %}
+
+  </div><!-- /.body__borders -->
+
+  {% assign about = page.event_id | append: "/about.md" %}
+  {% assign prep = page.event_id | append: "/prep.md" %}
+
+  {% include_relative {{about}} %}
+  {% include_relative {{prep}} %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" integrity="sha256-rsPUGdUPBXgalvIj4YKJrrUlmLXbOb6Cp7cdxn1qeUc=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" integrity="sha256-+nuEu243+6BveXk5N+Vbr268G+4FHjUOEcfKaBqfPbc=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit.min.js" integrity="sha256-JJgdoUCEwWBuvXW08W3EvBgfVEHoPt82Nje/+DXrDGs=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.4/js/uikit-icons.min.js" integrity="sha256-yALuSP2vwUtflUpSb0dMHDdCaNUfaHHpY6+TKCYDxes=" crossorigin="anonymous"></script>
+
+  {%- comment %}
+  base.min.js contains uikit stuff. this should be refactored so that
+  there is one load in both campus and capturer
+  {% endcomment -%}
+
+  <script type="text/javascript" src="{{'/assets/js/base.min.js' | relative_url}}"></script>
+
+
+
+  <script async defer src="https://hypothes.is/embed.js"></script>
 
 </body>
 </html>
