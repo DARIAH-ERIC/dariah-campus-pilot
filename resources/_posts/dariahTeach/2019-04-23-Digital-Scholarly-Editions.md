@@ -1,7 +1,7 @@
 ---
 title: "Digital Scholarly Editions: Manuscripts, Texts and TEI Encoding"
 categories: dariahTeach
-tags: TEI XML XSLT
+tags: TEI XML XSLT scholarly_editions
 language: en
 abstract: "This course will introduce you to the creation of digital scholarly editions, for manuscripts or printed texts, with the help of the TEI and other related technologies."
 type: remote # type remote means there will be a call to action and a button with the link to the actual resource; by default type = local
