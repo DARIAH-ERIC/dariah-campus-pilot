@@ -1,7 +1,7 @@
 ---
 title: An Introduction to Conceptual Modelling
 categories: dariahTeach
-tags: data modeling ontologies  
+tags: data_modeling ontologies  
 language: en
 abstract: "This workshop introduces the basics of conceptual modelling and ontologies."
 type: remote # type remote means there will be a call to action and a button with the link to the actual resource; by default type = local

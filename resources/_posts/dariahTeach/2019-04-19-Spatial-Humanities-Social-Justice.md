@@ -1,6 +1,6 @@
 ---
 title: "Spatial Humanities & Social Justice"
-tags: spacial_humanities
+tags: spatial_humanities
 # separate tags by spaces, use underscore instead of spaces in multiword tags
 # this is admittedly messy, should fix
 categories: dariahTeach
