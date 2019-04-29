@@ -5,7 +5,7 @@ tags: MOOC open_education
 abstract: "This video features Prof. Graeme Earl, Director of Enterprise and Impact (Humanities), University of Southampton, talking about the benefits and challenges of Open Education and Massive Open Online Courses."
 videos:
   - url: https://www.youtube.com/watch?v=YlnLbWygSB0
-    title: DH in Practice: Open Education and MOOCs
+    title: "DH in Practice: Open Education and MOOCs"
     img: /uploads/dariahTeach/graeme-earl.jpg
 
 ---
