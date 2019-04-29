@@ -1,13 +1,16 @@
 ---
 title: "What is the Role of Training and Education in Research Infrastructures?"
-tags: DH
 categories: DESIR
 # make sure that you save the post in the appropriate folder, based on the category; in this case this would go to /resources/_posts/dariahTeach
+tags: DH
+# separate tags by spaces, use underscore instead of spaces in multiword tags
 # language: en
+# indicate language with a two-letter code only if the resource is not in English
+# language: de
 # indicate language with a two-letter code only if the resource is not in English
 abstract: "DARIAH Director Toma Tasovac spoke to fellow DARIAHns and colleagues from prospective DARIAH countries about the role of training and education in digital research infrastructures."
 # Abstract is the text which appears as a teaser on the resources pages, i.e. https://dariah-eric.github.io/dariah-campus/resources/. It should be shortish. The text that appears in the body of the post (below) can be longer and split into paragraphs if necessary.
-# List videos as below
+# List videos as below:
 videos:
   - url: https://www.youtube.com/watch?v=OqYJNUmhJzw
     title: Laurent Romary
