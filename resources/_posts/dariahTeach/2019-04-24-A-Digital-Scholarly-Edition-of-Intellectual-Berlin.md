@@ -6,7 +6,7 @@ abstract: "This video features Anne Baillot, Centre Marc Bloch, Berlin, talking 
 videos:
   - url: https://www.youtube.com/watch?v=5NXV7YX6KKM
     title: "DH in Practice: A Digital Scholarly Edition of Intellectual Berlin around 1800"
-    img: /uploads/dariahTeach/anne-baillot.jpg.jpg
+    img: /uploads/dariahTeach/anne-baillot.jpg
 
 ---
 
