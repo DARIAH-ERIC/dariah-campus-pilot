@@ -1,7 +1,7 @@
 ---
 title: Digitising Dictionaries
 categories: dariahTeach
-tags: TEI lexicography XML data_modeling
+tags: TEI lexicography XML data_modeling scholarly_editions
 language: en
 abstract: "This course is an introduction to the theories, practices, and methods of digitizing legacy dictionaries for research, preservation and online distribution. It focuses on a particular technique of modeling and describing lexical data using eXtensible Markup Language (XML) in accordance with the Guidelines of the Text Encoding Initiative, a de-facto standard for text encoding among humanities researchers."
 type: remote # type remote means there will be a call to action and a button with the link to the actual resource; by default type = local

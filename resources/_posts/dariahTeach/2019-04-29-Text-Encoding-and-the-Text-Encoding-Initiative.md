@@ -1,7 +1,7 @@
 ---
 title: Text Encoding and the Text Encoding Initiative
 categories: dariahTeach
-tags: TEI XML
+tags: TEI XML scholarly_editions
 language: en
 abstract: "This course introduces the theory and practice of text encoding using the Guidelines of the Text Encoding Initiative."
 type: remote # type remote means there will be a call to action and a button with the link to the actual resource; by default type = local
