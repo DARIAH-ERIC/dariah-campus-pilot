@@ -13,8 +13,12 @@ left:
   - title: Sources
     url: /sources/
 
-  - title: About
-    url: /docs/disclaimer/
+  - title: Course Registry
+    url: /course-registry/
+
+#  - title: About
+#    url: /docs/disclaimer/
+#    need to fix navbar so that it stack properly when including about
 
   # - title: Changelogs
   #   dropdown:
@@ -38,6 +42,8 @@ right:
     #url: /contact/
     url: https://www.dariah.eu/helpdesk/
     button: success
+
+
 
   # - title: Changelog
   #   url: /contact/

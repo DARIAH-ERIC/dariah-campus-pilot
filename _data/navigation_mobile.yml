@@ -3,9 +3,6 @@
 - title: Home
   url: /
 
-# title: About
-# url: /docs/disclaimer/
-
 - title: Resources
   url: /resources/
 
@@ -14,6 +11,12 @@
 
 - title: Sources
   url: /sources/
+
+- title: Course Registry
+  url: /course-registry/
+
+- title: About
+  url: /docs/disclaimer/
 
 - title: Changelog
   url: /changelog-timeline/
