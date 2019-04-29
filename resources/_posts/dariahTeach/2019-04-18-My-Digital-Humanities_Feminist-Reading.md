@@ -10,7 +10,6 @@ videos:
   - url: https://youtu.be/n-Bt8HCcaUM
     title: Laura Mandell on Feminism and Digital Humanities
     img: /uploads/dariahTeach/laura-mandell.jpg
-columns: 1
 ---
 
 This video features Laura Mandell, Professor of English and Director of the Initiative for Digital Humanities, Media, and Culture a Texas A&M University. Laura defines feminism from a Digital Humanities perspective arguing for a need to adjust practices so that they are not replicating the sexist infrastructure of the traditional academy and business world.
