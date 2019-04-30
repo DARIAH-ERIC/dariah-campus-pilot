@@ -34,14 +34,18 @@ left:
 
 right:
 
-  - title: Changelog
-    url: /changelog-timeline/
+  # - title: Changelog
+  #   url: /changelog-timeline/
+  #   button: primary-outline
+
+  - title: About
+    url: /docs/disclaimer/
     button: primary-outline
 
   - title: Contact
     #url: /contact/
     url: https://www.dariah.eu/helpdesk/
-    button: success
+    button: primary
 
 
 

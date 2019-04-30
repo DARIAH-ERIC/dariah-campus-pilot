@@ -18,8 +18,8 @@
 - title: About
   url: /docs/disclaimer/
 
-- title: Changelog
-  url: /changelog-timeline/
+# - title: Changelog
+#   url: /changelog-timeline/
 
 - title: Contact
   url: https://www.dariah.eu/helpdesk/
