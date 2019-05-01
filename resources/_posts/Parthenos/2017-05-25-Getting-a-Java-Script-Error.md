@@ -1,6 +1,6 @@
 ---
 title: Getting a JavaScript console error
-categories: Parthenos
+categories: PARTHENOS
 language: en
 tags: TEI DH
 abstract: "In this lesson, you will learn how to georeference historical maps so that they may be added to a GIS as a raster layer."
