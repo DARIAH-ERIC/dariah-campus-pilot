@@ -2,11 +2,25 @@
 
     <div class="home__background" style="background-image: url({{include.bg_image | relative_url}});"></div><!-- /.home__background -->
 
+
+        {% include navbar4events.html %}
+
+        <style>
+        .uk-navbar-nav li a {
+          font-size: 16px;
+        }
+        </style>
+
+
     <div class="home__wrapper-1">
+
+
 
         <div class="home__wrapper-2">
 
             <div class="home__wrapper-3">
+
+
 
                 <div class="home__main">
 

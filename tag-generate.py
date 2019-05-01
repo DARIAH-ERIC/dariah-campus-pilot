@@ -15,7 +15,7 @@ Adopted by TT to include multiple posts directories for DARIAH-CAMPUS
 import glob
 import os
 
-posts = ['resources/_posts/**/*md', '_events/**/*md']
+posts = ['resources/_posts/**/*md', 'events/**/*md']
 tag_dir = 'tags/'
 
 total_tags = []

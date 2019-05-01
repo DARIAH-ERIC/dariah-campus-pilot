@@ -13,9 +13,7 @@
                 UIKIT
                 GLOBAL_LAYOUT
                 LINKS
-                HEADER
                 FOOTER
-                FORMS
                 IFRAME_RATIO
                 HEADINGS
                 HOME
@@ -24,6 +22,7 @@
                 POPIN
                 MEDIA_QUERIES
                     portrait
+                    just for the sticky nav
                     tablet
                     mobile
                     wide_screens
@@ -49,7 +48,7 @@ $red: #de1f4e;
 $base-font-size: 16;
 
 // == typography
-$trebuchet: 'roboto', Arial, Helvetica, Tahoma, sans-serif;
+$roboto: 'roboto', Arial, Helvetica, Tahoma, sans-serif;
 
 
 //
@@ -76,8 +75,6 @@ $trebuchet: 'roboto', Arial, Helvetica, Tahoma, sans-serif;
     &[uk-icon="cloud-download"] svg{ path, polyline{ stroke: currentColor; } }
 }
 
-//.session__core .session__downloads .link-download .uk-icon[uk-icon="file-pdf"] svg{ path{ fill: #f91703; } }
-
 
 //
 // == GLOBAL_LAYOUT
@@ -103,7 +100,7 @@ body{
     background: #fff;
     text-align: left;
     color: $violet1;
-    font-family: $trebuchet;
+    font-family: $roboto;
     line-height: 1.35;
     overflow-x: hidden; // for IE11...
 
@@ -179,14 +176,6 @@ a{
         }
     }
 }
-
-
-//
-// == HEADER
-// --------------------------------------------------
-//#header{
-//    position: relative;
-//}
 
 
 //
@@ -299,36 +288,6 @@ a{
 
 
 //
-// == FORMS
-// --------------------------------------------------
-input[type=text], input[type=number], input[type=email], input[type=search], input[type=file], input[type=password], textarea, select{
-    padding: .5em;
-    border: none;
-    background: #fff;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.25);
-    font-size : em(14);
-    font-family: $trebuchet;
-    line-height: normal; // extra padding in UA stylesheet
-}
-
-textarea{
-    overflow: auto;
-    line-height: 1.5;
-    resize: vertical;
-    font-family: $trebuchet;
-}
-
-.placeholded{ color: $violet1; }
-::-webkit-input-placeholder { color: $violet1; }
-::-moz-placeholder { color: $violet1; } // firefox 19+
-:-ms-input-placeholder { color: $violet1; } // ie
-input:-moz-placeholder { color: $violet1; }
-
-input[type=text]:hover, input[type=email]:hover, input[type=search]:hover, textarea:hover{ box-shadow: inset 0 1px 2px rgba(0,0,0,.3); }
-input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, textarea:focus{ box-shadow: inset 0 1px 2px rgba(0,0,0,.5); }
-
-
-//
 // == IFRAME_RATIO
 // --------------------------------------------------
 .iframe-container{
@@ -358,7 +317,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     text-transform: uppercase;
     font-size: 6rem;
     font-size: 3.5vw;
-    //@include responsive-font(3.5vw, 2rem, 6rem, 60px);
     line-height: 1;
 
     &::before, &::after{
@@ -414,10 +372,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
             background: #000;
             color: #fff;
             text-transform: uppercase;
-            line-height: 1;
+            line-height: .95;
             font-size: 1.6rem;
             font-size: .95vw;
-            @include responsive-font(1vw, 1rem, 1.6rem, 16px);
+            font-size: 1.05vw;
         }
     }
 
@@ -485,22 +443,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     padding-left: 6.25vw;
     padding-right: 6.25vw;
 
-    &::before, &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 6.25vw;
-        background: #fff;
-    }
-
-    &::before{ left: 0; }
-    &::after{ right: 0; }
-
     .home__background{
         position: absolute;
-        left: 6.25vw;
-        right: 6.25vw;
+        left: 0;
+        right: 0;
         top: 0;
         bottom: 0;
         background-position: center;
@@ -557,8 +503,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                     align-self: flex-start;
 
                     .h1{
-                        margin: 0 0 .75em;
-                        margin-left: -3.125vw;
+                        margin: 0 0 .75em -3.125vw;
                         font-size: 1em;
 
                         &::before, &::after{ display: none; }
@@ -586,7 +531,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                     .h2{
                         z-index: 1;
                         position: relative;
-                        //width: 37.5vw;
                         margin: 0;
                         padding: 0;
                         border: none;
@@ -617,7 +561,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                     .home__intro{
                         z-index: 1;
                         position: relative;
-                        //width: 37.5vw;
                         background: rgba(0,0,0,.75);
                         padding: .5em .75em;
                         color: #fff;
@@ -627,7 +570,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
 
                     .home__index{
                         position: relative;
-                        //width: 37.5vw;
 
                         &::before{
                             content: '';
@@ -665,7 +607,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                                     position: absolute;
                                     left: 0;
                                     top: .15em;
-                                    width: 6vw;
+                                    width: 6.5vw;
                                     overflow: hidden;
                                     display: inline-block;
                                     padding: .25em .5em;
@@ -699,7 +641,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
 
                                 strong{
                                     display: block;
-                                    padding-left: 6.5vw;
+                                    padding-left: 7vw;
                                     font-size: 2.4rem;
                                     font-size: 1.5vw;
                                     font-weight: normal;
@@ -771,6 +713,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                                     position: relative;
                                     display: inline-block;
                                     vertical-align: middle;
+                                    top: -.1em; // cheat code!
                                 }
 
                                 &.home__share__twitter{ background: #55acee; }
@@ -867,7 +810,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         right: 9.375vw;
         width: 1px;
         background: $pink1;
-        //opacity: .5;
     }
 
     &::before{ left: 3.125vw; }
@@ -926,7 +868,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         }
 
         p, .list-standard li{
-            font-size: 1.25vw;
+            font-size: 1.70vw; //TT changed from 1.75
         }
 
         .list-standard{
@@ -1097,7 +1039,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
 
                         p, li{
                             font-size: 1.8rem;
-                            font-size: 1.1vw;
+                            font-size: 1.3vw;
                         }
 
                         div{
@@ -1105,7 +1047,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                             column-gap: 3.125vw;
 
                             &.one-column{ column-count: 1; }
-
                         }
 
                         .list-speakers__links{
@@ -1422,9 +1363,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3{
         display: block;
 
-        .home__main, .home__aside{
-            width: 100%;
-        }
+        .home__main, .home__aside{ width: 100%; }
 
         .home__aside{
             .home__share, .home__links, .home__more{ text-align: left; }
@@ -1444,6 +1383,11 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     }
 }
 
+// == just for the sticky nav
+@media screen and (max-width: em(670)){
+    #nav-anchors{ display: none; }
+}
+
 // == tablet
 @media screen and (max-width: em(1010)){
 
@@ -1461,7 +1405,19 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         &.table-cell{ display: table-cell!important; }
     }
 
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a small span i{ display: none; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a{
+        small{
+            width: 7.5rem;
+
+            span{ font-size: 1rem; }
+        }
+
+        strong{
+            padding-left: 8.5rem;
+            padding-top: .35rem;
+        }
+    }
+
     .session .session__core .session__speakers .list-speakers li .list-speakers__bio div{ column-count: 1; }
 
     .session .session__core .floated{
@@ -1478,33 +1434,35 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
 
     // font-sizes
     // ----------
-    .link-download{ font-size: 1.4rem; }
-    .link-download strong span{ font-size: 1.3rem; }
+    .link-download{ font-size: 1.8rem; }
+    .link-download strong span{ font-size: 1.6rem; }
 
     #footer p, #footer li{ font-size: 1.4rem; }
 
     .h1{ font-size: 2.2rem; }
-    .h2{ font-size: 1.6rem; }
-    .h3{ font-size: 1.5rem; }
+    .h1 strong{ margin-top: -3vw; }
+    .h1 strong::before{ padding-right: .25em; }
+    .h2{ font-size: 2rem; }
+    .h3{ font-size: 1.8rem; }
 
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h2 span{ font-size: 1.5rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__intro{ font-size: 1.4rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a small{ font-size: 1.3rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a strong{ font-size: 1.5rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__links{ font-size: 1.5rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__more{ font-size: 1.3rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h2 span{ font-size: 2rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__intro{ font-size: 1.8rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a small{ font-size: 1.6rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a strong{ font-size: 1.8rem; padding-top: .5rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__links{ font-size: 1.8rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__more{ font-size: 1.6rem; }
 
     #nav-anchors ol li a{ font-size: 1.5rem; }
     #nav-anchors ol li a strong{font-size: 1.3rem; }
 
-    .session .session__core p{ font-size: 1.4rem; }
-    .session .session__core .list-standard li{ font-size: 1.4rem; }
-    .session .session__core .floated .floated__caption{ font-size: 1.2rem; }
-    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio p{ font-size: 1.4rem; }
-    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio .list-speakers__links > li{ font-size: 1.4rem; }
+    .session .session__core p{ font-size: 1.8rem; }
+    .session .session__core .list-standard li{ font-size: 1.8rem; }
+    .session .session__core .floated .floated__caption{ font-size: 1.4rem; }
+    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio p{ font-size: 1.6rem; }
+    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio .list-speakers__links > li{ font-size: 1.6rem; }
 
-    .popin-content .popin-core p{ font-size: 1.4rem; }
-    .popin-content .popin-core li{ font-size: 1.4rem; }
+    .popin-content .popin-core p{ font-size: 1.6rem; }
+    .popin-content .popin-core li{ font-size: 1.6rem; }
 }
 
 // == mobile
@@ -1524,6 +1482,11 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         &.table-cell{ display: table-cell!important; }
     }
 
+    body .body__borders{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     #footer{
         padding-right: 3.125vw;
 
@@ -1531,6 +1494,8 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
             position: static;
             width: 50%;
             margin-bottom: 1.5em;
+
+            span{ font-size: 5vw; }
         }
 
         .footer__links{
@@ -1558,58 +1523,67 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         }
     }
 
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3{
-        display: block;
-        padding: 2rem 0 5rem;
+    .home{
+        padding-left: 0;
+        padding-right: 0;
 
-        .home__main, .home__aside, .home__main .h1{ width: 100%; }
-
-        .home__main{
-            .h1{
-                margin-bottom: 5rem;
-
-                img{ width: 20rem; }
-
-                span{
-                    margin-left: 3rem;
-                    font-size: 3rem;
-                }
-            }
-
-            .h2 span, .home__intro{ padding: .5rem 1rem; }
-
-            .home__index li a{
-                small{ width: 7rem;
-                    span i{ display: inline; }
-                }
-
-                strong{
-                    padding-left: 7.5rem;
-                    padding-top: .25rem;
-                }
-            }
+        .home__wrapper-1::after{
+            right: 3.125vw;
         }
 
-        .home__aside{
-            .home__share, .home__links, .home__more{ text-align: left; }
+        .home__wrapper-1 .home__wrapper-2 .home__wrapper-3{
+            display: block;
+            padding: 2rem 0 5rem;
 
-            .home__share{
-                position: static;
-                padding: 2rem 0;
+            .home__main, .home__aside, .home__main .h1{ width: 100%; }
 
-                li a{
-                    width: 3rem;
-                    height: 3rem;
-                    line-height: 3rem;
-                    font-size: 2rem;
+            .home__main{
+                .h1{
+                    margin-bottom: 5rem;
+
+                    img{ width: 20rem; }
+
+                    span{
+                        margin-left: 3rem;
+                        font-size: 3rem;
+                    }
                 }
 
-                li{ display: inline-block; }
+                .h2 span, .home__intro{ padding: .5rem 1rem; }
+
+                .home__index li a{
+                    small{ width: 7rem;
+                        span i{ display: inline; }
+                    }
+
+                    strong{
+                        padding-left: 7.5rem;
+                        padding-top: .25rem;
+                    }
+                }
             }
 
-            .home__links li.download::before{
-                right: inherit;
-                left: 0;
+            .home__aside{
+                .home__share, .home__links, .home__more{ text-align: left; }
+
+                .home__share{
+                    position: static;
+                    padding: 2rem 0;
+
+                    li a{
+                        width: 3rem;
+                        height: 3rem;
+                        line-height: 3rem;
+                        font-size: 2rem;
+                    }
+
+                    li{ display: inline-block; }
+                }
+
+                .home__links li.download::before{
+                    right: inherit;
+                    left: 0;
+                }
             }
         }
     }
@@ -1623,7 +1597,8 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
             width: auto;
             text-align: left;
             margin: 0;
-            color: $violet2;
+            padding-right: 0;
+            color: $violet1;
         }
     }
 
@@ -1645,8 +1620,14 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
             .link-download{ display: none; }
         }
 
+        .session__core, .session__core .clearfix{
+            > .h2, > .h3, > p, > ul li{ padding-right: 1.5rem; }
+        }
+
         .session__core{
             padding-bottom: 5rem;
+
+            p{ word-wrap: break-word; }
 
             .floated{
                 width: 100%;
@@ -1664,28 +1645,46 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                 }
             }
 
-            .session__speakers .list-speakers > li{
-                margin-left: 6.25vw;
-                margin-bottom: 0;
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
+            .session__speakers{
+                padding-top: 2.5rem;
+                .h2{ white-space: nowrap; } // quick fix
 
-                img{
-                    position: relative;
-                    float: left;
-                    width: 7.5rem;
-                    height: 7.5rem;
-                    margin: 0 1rem 1rem -1rem;
-                }
+                .list-speakers > li{
+                    margin-left: 6.25vw;
+                    margin-bottom: 0;
+                    padding-top: 1.5rem;
+                    padding-bottom: 1.5rem;
 
-                .list-speakers__bio{
-                    padding: 0;
+                    img{
+                        position: relative;
+                        float: left;
+                        width: 7.5rem;
+                        height: 7.5rem;
+                        margin: 0 1rem 1rem -1rem;
+                    }
 
-                    div{ display: inline; }
+                    .list-speakers__bio{
+                        padding: 0;
 
-                    .list-speakers__links > li{
-                        margin-top: .5em;
-                        display: block;
+                        div{ display: inline; }
+
+                        p{ word-wrap: break-word; }
+
+                        .list-speakers__links{
+                            margin-top: 1rem;
+                            margin-bottom: 1rem;
+                            padding-top: .5rem;
+
+                            > li{
+                                margin-top: .5em;
+                                display: block;
+
+                                a{
+                                    word-wrap: break-word;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1704,7 +1703,6 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
                 }
             }
 
-
             .session__speakers + .session__downloads{
                 .link-download{
                     margin-top: 0;
@@ -1715,48 +1713,57 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
         }
     }
 
+    #nav-anchors{
+        right: 4.6875vw;
+    }
+
     .popin-closer{
         background: $violet1;
         font-size: 2.5rem;
         opacity: 1;
     }
-    .popin-content .popin-core ul{
-        flex-direction: column;
+    .popin-content{
+        width: 90%;
+        margin-right: 5%; // hypothes.is
 
-        li{
-            width: 100%;
-            padding: 0 25%;
+        .popin-core ul{
+            flex-direction: column;
+
+            li{
+                width: 100%;
+                //padding: 0 25%;
+            }
         }
     }
 
     // font-sizes
     // ----------
-    .link-download{ font-size: 1.2rem; }
-    .link-download strong span{ font-size: 1.1rem; }
+    .link-download{ font-size: 1.4rem; }
+    .link-download strong span{ font-size: 1.3rem; }
 
-    #footer p, #footer li{ font-size: 1.2rem; }
+    #footer p, #footer li{ font-size: 1.4rem; }
 
-    .h1{ font-size: 2rem; }
-    .h2{ font-size: 1.4rem; }
-    .h3{ font-size: 1.3rem; }
+    .h1{ font-size: 2.2rem; }
+    .h2{ font-size: 1.8rem; }
+    .h3{ font-size: 1.6rem; }
 
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h2 span{ font-size: 1.3rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__intro{ font-size: 1.2rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a small{ font-size: 1.1rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a strong{ font-size: 1.3rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__links{ font-size: 1.3rem; }
-    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__more{ font-size: 1.1rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h2 span{ font-size: 1.5rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__intro{ font-size: 1.4rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a small{ font-size: 1.3rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .home__index li a strong{ font-size: 1.5rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__links{ font-size: 1.5rem; }
+    .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__more{ font-size: 1.3rem; }
 
-    #nav-anchors ol li a{ font-size: 1.3rem; }
-    #nav-anchors ol li a strong{font-size: 1.1rem; }
+    #nav-anchors ol li a{ font-size: 1.5rem; }
+    #nav-anchors ol li a strong{font-size: 1.3rem; }
 
-    .session .session__core p{ font-size: 1.2rem; }
-    .session .session__core .list-standard li{ font-size: 1.2rem; }
-    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio p{ font-size: 1.2rem; }
-    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio .list-speakers__links > li{ font-size: 1.2rem; }
+    .session .session__core p{ font-size: 1.6rem; }
+    .session .session__core .list-standard li{ font-size: 1.6rem; }
+    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio p{ font-size: 1.4rem; }
+    .session .session__core .session__speakers .list-speakers > li .list-speakers__bio .list-speakers__links > li{ font-size: 1.4rem; }
 
-    .popin-content .popin-core p{ font-size: 1.2rem; }
-    .popin-content .popin-core li{ font-size: 1.2rem; }
+    .popin-content .popin-core p{ font-size: 1.4rem; }
+    .popin-content .popin-core li{ font-size: 1.4rem; }
 }
 
 // == wide_screens
@@ -1785,7 +1792,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
 
     .h1{ font-size: 6rem; }
     .h2{ font-size: 3.4rem; }
-    .h3{ font-size: 2.4rem; }
+    .h3{ font-size: 3rem; }
 
     .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h1{  margin-left: -5.5rem; }
     .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__main .h1 img{ width: 35rem; }
@@ -1798,16 +1805,16 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__share li a{ font-size: 2.6rem; }
     .home .home__wrapper-1 .home__wrapper-2 .home__wrapper-3 .home__aside .home__more{ font-size: 1.6rem; }
 
-    #nav-anchors ol li a{ font-size: 2.6rem; }
+    #nav-anchors ol li a{ font-size: 3.3rem; }
     #nav-anchors ol li a strong{font-size: 2rem; }
 
-    .session .session__core p{ font-size: 2rem; }
-    .session .session__core .list-standard li{ font-size: 2rem; }
-    .session .session__core .floated .floated__caption{ font-size: 1.8rem; }
-    .session .session__core .session__speakers .list-speakers li .list-speakers__bio p{ font-size: 1.8rem; }
+    .session .session__core p{ font-size: 3rem; }
+    .session .session__core .list-standard li{ font-size: 3rem; }
+    .session .session__core .floated .floated__caption{ font-size: 2.8rem; }
+    .session .session__core .session__speakers .list-speakers li .list-speakers__bio p, .session .session__core .session__speakers .list-speakers li .list-speakers__bio li{ font-size: 2.8rem; }
 
-    .popin-content .popin-core p{ font-size: 1.8rem; }
-    .popin-content .popin-core li{ font-size: 1.8rem; }
+    .popin-content .popin-core p{ font-size: 2.8rem; }
+    .popin-content .popin-core li{ font-size: 2.8rem; }
 }
 
 
@@ -1838,5 +1845,4 @@ input[type=text]:focus, input[type=email]:focus, input[type=search]:focus, texta
     body{ padding:.5em; }
     .no-print{ display: none; }
     .print-only{ display: block; }
-
 }

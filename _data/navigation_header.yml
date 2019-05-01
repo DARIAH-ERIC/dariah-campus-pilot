@@ -16,6 +16,9 @@ left:
   - title: Course Registry
     url: /course-registry/
 
+  - title: About
+    url: /docs/disclaimer/
+
 #  - title: About
 #    url: /docs/disclaimer/
 #    need to fix navbar so that it stack properly when including about
@@ -38,14 +41,13 @@ right:
   #   url: /changelog-timeline/
   #   button: primary-outline
 
-  - title: About
-    url: /docs/disclaimer/
-    button: primary-outline
+
+
 
   - title: Contact
     #url: /contact/
     url: https://www.dariah.eu/helpdesk/
-    button: primary
+    button: primary-outline
 
 
 
