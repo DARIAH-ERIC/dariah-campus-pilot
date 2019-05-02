@@ -3,9 +3,6 @@
 - title: Home
   url: /
 
-# title: About
-# url: /docs/disclaimer/
-
 - title: Resources
   url: /resources/
 
@@ -15,8 +12,14 @@
 - title: Sources
   url: /sources/
 
-- title: Changelog
-  url: /changelog-timeline/
+- title: Course Registry
+  url: /course-registry/
+
+- title: About
+  url: /docs/disclaimer/
+
+# - title: Changelog
+#   url: /changelog-timeline/
 
 - title: Contact
   url: https://www.dariah.eu/helpdesk/
