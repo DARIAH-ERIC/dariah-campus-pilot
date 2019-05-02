@@ -135,8 +135,10 @@ defaults:
       type:         local
       is_post:      true
       button_text:  Go to this resource
-      teaser: Interested in learning more?
+      teaser:       Interested in learning more?
       width:        xsmall
+      columns:      1
+      language:     en
 
   # _docs
   - scope:
