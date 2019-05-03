@@ -1,16 +1,30 @@
-<div>
-    <nav class="uk-navbar-container uk-light">
+{%- if include.for == "events" -%}
+  {% assign cls_active = "uk-dark" %}
+  {% assign cls_inactive = "uk-light" %}
+  {% assign cutoff = "l" %}
+
+{%- else -%}
+
+{% assign cls_active = "" %}
+{% assign cls_inactive = "" %}
+{% assign cutoff = "m" %}
+
+{%- endif -%}
+
+<div {% if site.navbar.sticky %} data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky {{cls_active}}
+; cls-inactive: uk-navbar-transparent {{cls_inactive}}; top: 200; show-on-up: true"{% endif %}>
+    <nav class="uk-navbar-container">
         <div class="uk-container">
             <div data-uk-navbar>
                 <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo uk-visible@m" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a>
-                    {% if site.data.translation[site.lang].mobile_nav_docs %}
-                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">{{ site.data.translation[site.lang].mobile_nav_docs }}</span></a>
+                    <a class="uk-navbar-item uk-logo uk-visible@{{cutoff}}" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a>
+                    {% if site.data.translation[site.lang].mobile_nav_site %}
+                        <a class="uk-navbar-toggle uk-hidden@{{cutoff}}" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">{{ site.data.translation[site.lang].mobile_nav_site }}</span></a>
                     {% else %}
-                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-navbar-toggle-icon data-uk-toggle></a>
+                        <a class="uk-navbar-toggle uk-hidden@{{cutoff}}" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
                     {% endif %}
 
-                    <ul class="uk-navbar-nav uk-visible@m">
+                    <ul class="uk-navbar-nav uk-visible@{{cutoff}}">
                         {% for link in site.data.navigation_header.left %}
                             {% if link.url contains 'http' %}
                                 {% assign domain = '' %}
@@ -60,7 +74,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="uk-navbar-center uk-hidden@m">
+                <div class="uk-navbar-center uk-hidden@{{cutoff}}">
                     <a class="uk-navbar-item uk-logo" href="{{ "/" | relative_url }}">{% if site.logo %}<img src="{{ site.uploads | absolute_url }}{{ site.logo }}" alt="{{ site.title | escape }}">{% else %}{{ site.title | escape }}{% endif %}</a>
                 </div>
                 <div class="uk-navbar-right" style="margin-right:0.6vw;">
@@ -88,7 +102,7 @@
                         {% endunless %}
                     {% endif %}
 
-                    <ul class="uk-navbar-nav uk-visible@m">
+                    <ul class="uk-navbar-nav uk-visible@{{cutoff}}">
                         {% for link in site.data.navigation_header.right %}
                             {% if link.url contains 'http' %}
                                 {% assign domain = '' %}
@@ -138,11 +152,15 @@
                         {% endfor %}
                     </ul>
 
-                    {% if site.data.translation[site.lang].mobile_nav_site %}
-                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">{{ site.data.translation[site.lang].mobile_nav_site }}</span></a>
-                    {% else %}
-                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
-                    {% endif %}
+{%- comment %}
+{% if site.data.translation[site.lang].mobile_nav_docs %}
+    <a class="uk-navbar-toggle uk-hidden@{{cutoff}}" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">{{ site.data.translation[site.lang].mobile_nav_docs }}</span></a>
+{% else %}
+    <a class="uk-navbar-toggle uk-hidden@{{cutoff}}" href="#offcanvas-docs" data-uk-navbar-toggle-icon data-uk-toggle></a>
+{% endif %}
+{% endcomment -%}
+
+
 
                 </div>
             </div>

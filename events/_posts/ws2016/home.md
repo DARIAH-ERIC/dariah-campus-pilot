@@ -1,15 +1,15 @@
+
+
 <div class="home">
+
+
 
     <div class="home__background" style="background-image: url({{include.bg_image | relative_url}});"></div><!-- /.home__background -->
 
 
-        {% include navbar4events.html %}
+  {% include navbar.html for="events" %}
 
-        <style>
-        .uk-navbar-nav li a {
-          font-size: 16px;
-        }
-        </style>
+
 
 
     <div class="home__wrapper-1">
@@ -39,61 +39,61 @@
 
                     <ul class="home__index">
                         <li>
-                            <a href="#session-1" class="internal-link">
+                            <a href="#session-1" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 1</span></small>
                                 <strong>Introduction</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-2" class="internal-link">
+                            <a href="#session-2" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 2</span></small>
                                 <strong>Open Critical Edition. The Missing Link Between Digital Humanities and Open Science</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-3" class="internal-link">
+                            <a href="#session-3" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 3</span></small>
                                 <strong>Data Management Plan</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-4" class="internal-link">
+                            <a href="#session-4" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 4</span></small>
                                 <strong>Persistent Identification</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-5" class="internal-link">
+                            <a href="#session-5" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 5</span></small>
                                 <strong>Evaluation Acknowledgement and Credit Circulation</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-6" class="internal-link">
+                            <a href="#session-6" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 6</span></small>
                                 <strong>Case studies</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-7" class="internal-link">
+                            <a href="#session-7" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 7</span></small>
                                 <strong>Data Journals &amp; Editorialization of Open Data</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-8" class="internal-link">
+                            <a href="#session-8" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 8</span></small>
                                 <strong>Economy of Open Access &amp; Open Data Publication</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-9" class="internal-link">
+                            <a href="#session-9" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 9</span></small>
                                 <strong>Infrastructure &amp; Platform</strong>
                             </a>
                         </li>
                         <li>
-                            <a href="#session-10" class="internal-link">
+                            <a href="#session-10" uk-scroll="offset:80">
                                 <small><span><i>Session</i> 10</span></small>
                                 <strong>Social impact</strong>
                             </a>
