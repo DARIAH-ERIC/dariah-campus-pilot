@@ -44,13 +44,15 @@ layout: null
 </head>
 
 
-<body id="body">
+<body id="body" class="capturer">
 
 
   {% assign home = page.event_id | append: "/home.md" %}
   {% include_relative {{home}} bg_image=page.home_image %}
 
   <div class="body__borders">
+
+
 
     <div class="pos-r sticky-position-container">
 
@@ -78,6 +80,8 @@ layout: null
     {% include_relative {{footer}} %}
 
   </div><!-- /.body__borders -->
+
+  {% include offcanvas.html %}
 
   {% assign about = page.event_id | append: "/about.md" %}
   {% assign prep = page.event_id | append: "/prep.md" %}

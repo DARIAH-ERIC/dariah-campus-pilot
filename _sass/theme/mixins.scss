@@ -24,6 +24,21 @@ footer {
     width: 175px !important;
 }
 
+.uk-offcanvas-flip .uk-offcanvas-bar {
+    left: 0;
+    right: auto;
+}
+
+.uk-offcanvas-close {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    right: auto;
+}
+
+
 // Docs Theme Mixins
 // ========================================================================
 
