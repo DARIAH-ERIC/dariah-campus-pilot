@@ -35,6 +35,8 @@ Before you make your next contribution, you have to make sure that your local br
    This will make sure that _your local_ and _your remote branch_ are in sync. Which is important, if you have, for instance, used a different computer to commit and publish etc. Or if, God forbid, somebody messed around with your branch. They shouldn't. But it did happen at least once. And Toma was to blame :)
 3. **Branch > Update from master**
    This will now, in addition, update _your local branch_ with all the contributions that have meanwhile been merged into the master from the other branches. Remember, each contributor works in their own branch.
+4. **If GitHub Desktop instructs you to push origin, push origin.**
+   This will make sure that the changes from master, which you've added to  _your local_ branch in the previous step, will also make it to _your remote branch_. With your local and remote branch fully updated and sync you can finally get to do your work.
 4. **Do your work.**
 5. **Commit your work.**    
    This will save your work to _your_ branch _locally_.

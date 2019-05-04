@@ -44,6 +44,7 @@ layout: null
 </head>
 
 
+
 <body id="body" class="capturer">
 
 
@@ -51,7 +52,6 @@ layout: null
   {% include_relative {{home}} bg_image=page.home_image %}
 
   <div class="body__borders">
-
 
 
     <div class="pos-r sticky-position-container">
@@ -81,7 +81,9 @@ layout: null
 
   </div><!-- /.body__borders -->
 
+
   {% include offcanvas.html %}
+
 
   {% assign about = page.event_id | append: "/about.md" %}
   {% assign prep = page.event_id | append: "/prep.md" %}
