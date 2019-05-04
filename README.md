@@ -34,11 +34,11 @@ Before you make your next contribution, you have to make sure that your local br
 2. **If GitHub Desktop instructs you to pull origin, pull origin.**
    This will make sure that _your local_ and _your remote branch_ are in sync. Which is important, if you have, for instance, used a different computer to commit and publish etc. Or if, God forbid, somebody messed around with your branch. They shouldn't. But it did happen at least once. And Toma was to blame :)
 3. **Branch > Update from master**
-   This will now, in addition, update _your local branch_ with all the contributions that have meanwhile been merged into the master from the other branches. Remember, each contributor works in their own branch. 
+   This will now, in addition, update _your local branch_ with all the contributions that have meanwhile been merged into the master from the other branches. Remember, each contributor works in their own branch.
 4. **Do your work.**
 5. **Commit your work.**    
    This will save your work to _your_ branch _locally_.
-6. **Publish your branch.**    
+6. **Push origin.**    
    This will save your work to _your_ branch _remotely_.
 7. **Create a pull request.**    
-   This will alert the repository admin person that there are changes thashould be merged into the master branch, i.e. made public.
+   This will alert the repository admin person that there are changes that should be merged into the master branch, i.e. made public.
