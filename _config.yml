@@ -89,7 +89,7 @@ disqus:
 google_analytics:
 
 # Number of posts displayed on blog page
-paginate:           10
+paginate:           12
 
 # Blog path
 paginate_path:      "/resources/:num/"

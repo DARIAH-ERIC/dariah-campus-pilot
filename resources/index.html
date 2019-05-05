@@ -4,7 +4,7 @@ title: Resources
 ---
 
 <div class="uk-section">
-  <div class="uk-container uk-container-xsmall">
+  <div class="uk-container uk-container-extend">
 
     <h1 class="uk-article-title uk-text-center">{{ page.title | escape }}</h1>
 
@@ -21,61 +21,78 @@ title: Resources
       </li>
     </ul>
 
+    <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-medium-top" uk-grid="masonry: true">
 
 
-    {% for post in paginator.posts %}
-    <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight uk-width-1-1 uk-margin">
 
-      <div class="uk-card-header">
-        <div class="uk-grid-small uk-flex-middle" uk-grid>
-          {% if post.author %}
-          {% assign author = site.authors[post.author] %}
-          {% else %}
-          {% assign author = site.author %}
-          {% endif %}
+      {% for post in paginator.posts %}
+      <div>
+        <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium card-post uk-inline border-radius-medium border-xlight">
 
-          {% if author.avatar %}
-          <div class="uk-width-auto">
-            {% if author.avatar contains 'http' %}
-            {% assign domain = '' %}
-            {% else %}
-            {% assign domain = site.uploads | absolute_url %}
-            {% endif %}
-            <img class="uk-border-circle avatar" src="{{ domain }}{{ author.avatar }}" alt="{{ author.name }}">
-          </div>
-          {% endif %}
+          <div class="uk-card-header">
 
 
-          <div class="uk-width-expand">
-            <h3 class="uk-card-title uk-margin-remove-bottom"><a class="uk-link-heading" href="{{ post.url | relative_url }}">{{ post.title  }}</a></h3>
-            <p class="uk-text-meta uk-margin-remove-top"><time datetime="{{ post.date | date_to_xmlschema }}">
-              {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
-              {{ post.date | date: date_format }}
-            </time></p>
-          </div>
+
+        <h3 class="uk-card-title uk-margin-remove-bottom"><a class="uk-link-heading" href="{{ post.url | relative_url }}">{{ post.title  }}</a></h3>
+        <p class="uk-text-meta uk-margin-remove-top"><time datetime="{{ post.date | date_to_xmlschema }}">
+        {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+        {{ post.date | date: date_format }}
+      </time></p>
+
+
+</div>
+
+
+<div class="uk-card-body">
+    {%- if post.abstract != "" -%}
+  {{ post.abstract}}
+  {%- else -%}
+  {{ post.excerpt }}
+  {%- endif -%}
+</div>
+
+
+<div class="uk-card-footer uk-background-muted dcr-footer">
+
+
+  <div class="uk-grid-small uk-flex-middle" uk-grid>
+    {% if post.author %}
+    {% assign author = site.authors[post.author] %}
+    {% else %}
+    {% assign author = site.author %}
+    {% endif %}
+
+    {% if author.avatar %}
+    <div class="uk-width-1-4">
+    {% if author.avatar contains 'http' %}
+    {% assign domain = '' %}
+    {% else %}
+    {% assign domain = site.uploads | absolute_url %}
+    {% endif %}
+    <img class="uk-border-circle avatar" src="{{ domain }}{{ author.avatar }}" alt="{{ author.name }}" width="40px">
+  </div>
+  {% endif %}
+        <div class="uk-width-3-4 uk-text-right">
+          <a href="{{ post.url | relative_url }}" class="uk-button uk-button-text">{{ site.data.translation[site.lang].read_more | default: "Read more" }} &rarr;</a>
         </div>
-      </div>
-      <div class="uk-card-body">
-
-        {%- if post.abstract != "" -%}
-        {{ post.abstract}}
-        {%- else -%}
-        {{ post.excerpt }}
-        {%- endif -%}
-
-
-
-
-
-      </div>
-      <div class="uk-card-footer">
-        <a href="{{ post.url | relative_url }}" class="uk-button uk-button-text">{{ site.data.translation[site.lang].read_more | default: "Read more" }} &rarr;</a>
-      </div>
-
-    </div>
-    {% endfor %}
-
-    {% include paginate-blog.html %}
 
   </div>
+
+
+
+</div>
+
+
+</div>
+</div>
+{% endfor %}
+</div>
+
+
+
+
+
+{% include paginate-blog.html %}
+
+</div>
 </div>
