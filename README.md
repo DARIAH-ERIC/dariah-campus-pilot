@@ -27,7 +27,7 @@
 
 #### Subsequent contributions
 
-Before you make your next contribution, you have to make sure that your local branch is up to date. Remember, you created your special little branch off of master at some point, but other people may have contributed to master in the meantime. So it's very important that you follow  this procedure _every time_ you start doing work on your branch again.
+Before you make your next contribution, you have to make sure that your local branch is up to date. Remember, you created your special little branch off of the master at some point, but other people may have contributed to the master in the meantime. So it's very important that you follow  this procedure _every time_ you start doing work on your branch again.
 
 1. **In GitHub Desktop, in your branch, fetch origin.**  
    This will check whether there were any changes made to _your_ branch _remotely_.
@@ -36,7 +36,7 @@ Before you make your next contribution, you have to make sure that your local br
 3. **Branch > Update from master**  
    This will now, in addition, update _your local branch_ with all the contributions that have meanwhile been merged into the master from the other branches. Remember, each contributor works in their own branch.
 4. **If GitHub Desktop instructs you to push origin, push origin.**  
-   This will make sure that the changes from master, which you've added to  _your local_ branch in the previous step, will also make it to _your remote branch_. With your local and remote branch fully updated and sync you can finally get to do your work.
+   This will make sure that the changes from the master branch, which you've added to  _your local_ branch in the previous step, will also make it to _your remote branch_. With your local and remote branch fully updated and sync you can finally get to do your work.
 4. **Do your work.**
 5. **Commit your work.**  
    This will save your work to _your_ branch _locally_.
