@@ -1,31 +1,45 @@
-<footer class="uk-section uk-text-center uk-text-muted">
-    <div class="uk-container uk-container-small">
+<footer class="uk-section uk-text-center uk-text-muted footer">
+  <div class="uk-container uk-container-small">
 
-        <div>
-            <ul class="uk-subnav uk-flex-center">
-                {% for link in site.data.navigation_footer %}
-                    {% if link.url contains 'http' %}
-                        {% assign domain = '' %}
-                    {% else %}
-                        {% assign domain = '' | relative_url %}
-                    {% endif %}
-                    {% if link.url == page.url %}
-                        {% assign current = ' class="uk-active"' %}
-                    {% else %}
-                        {% assign current = null %}
-                    {% endif %}
-                    {% if link.title %}
-                        <li{{ current }}><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="uk-margin-medium">
-            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
-                {% include social-networks.html %}
-            </div>
-        </div>
-        <div class="uk-margin-medium uk-text-small copyright link-secondary">{{ site.footer.copyright }}</div>
-
+    <div>
+      <ul class="uk-subnav uk-flex-center uk-light">
+        {% for link in site.data.navigation_footer %}
+        {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = '' | relative_url %}
+        {% endif %}
+        {% if link.url == page.url %}
+        {% assign current = ' class="uk-active"' %}
+        {% else %}
+        {% assign current = null %}
+        {% endif %}
+        {% if link.title %}
+        <li{{ current }}><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
     </div>
+    <div class="uk-margin-medium uk-light">
+      <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+        {% include social-networks.html %}
+      </div>
+    </div>
+
+
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div class="uk-text-small uk-flex-inline uk-flex-middle uk-text-left">
+          <div class="uk-flex uk-flex-auto">
+        <img src="{{'/uploads/eu_flag.jpg' | relative_url}}" width="70px" alt="EU flag" class="eu uk-visible@s" uk-img>
+        <img src="{{'/uploads/eu_flag.jpg' | relative_url}}" width="50px" alt="EU flag" class="eu uk-hidden@s" uk-img>
+        </div>
+        <div class="uk-margin-small-left uk-flex">Co-funded by the Horizon 2020 innovation and research programme of the European Union.</div>
+      </div>
+
+        <div class="uk-text-small copyright link-secondary uk-text-left">
+          {{ site.footer.copyright }}
+        </div>
+    </div>
+
+  </div>
 </footer>

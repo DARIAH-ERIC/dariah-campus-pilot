@@ -6,9 +6,10 @@ hero:
     image: study.svg
 ---
 
-
-<div class="uk-container uk-container-xsmall">
+<div class="uk-section stretch">
+<div class="uk-container uk-container-xsmall uk-margin-xlarge-bottom">
 
 {% include tagcloud.html %}
 
+</div>
 </div>

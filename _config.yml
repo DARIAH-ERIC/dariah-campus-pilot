@@ -79,7 +79,7 @@ share:
 
 # Default footer image settings
 footer:
-    copyright:      Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.
+    copyright:      Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" class="uk-link-text">Creative Commons Attribution 4.0 International license</a>.
 
 # Disqus comments shortname, requires Disqus account https://disqus.com/
 disqus:

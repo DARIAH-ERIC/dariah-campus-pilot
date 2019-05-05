@@ -3,7 +3,7 @@ title: "DARIAH Guide to data management best practices in the humanities"
 categories: DARIAH_Guides
 tags: data_management
 language: en
-abstract: "This DARIAH Guide brings together tools, videos, short articles and other training materials that might be relevant when reflecting on your data management processes both in the immediate context of your research and in their broader disciplinary context. Its aim is to equip you with tools and practical advice, but more importantly, with conceptual twists that will help you to establish ethically committed, optimal and as open as possible research and data management workflows"
+abstract: "This DARIAH Guide brings together tools, videos, short articles and other training materials that might be relevant when reflecting on your data management processes both in the immediate context of your research and in their broader disciplinary context. Its aim is to equip you with tools and practical advice, but more importantly, with conceptual twists that will help you to establish ethically committed, optimal and as open as possible research and data management workflows."
 author: erzsebet
 ---
 

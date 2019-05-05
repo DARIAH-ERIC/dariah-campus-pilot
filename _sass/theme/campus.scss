@@ -1,0 +1,71 @@
+//Dariah Campus
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.stretch {
+  flex:1;
+}
+
+.footer {
+  background-color: #2C3547;
+  img.eu {
+    border: 1px solid $global-muted-color;
+    // border-radius: 4px;
+    // padding: 5px;
+    // width: 50px;
+    padding-left: 0;
+  }
+
+
+}
+
+// .uk-grid-small > img.eu {
+//   padding-left: 0;
+// }
+
+.uk-logo img {
+  width: 229px;
+}
+
+.tags {
+  line-height: 2.5;
+}
+
+.uk-card-body {
+  padding: 30px 40px 20px 40px !important;
+}
+
+.link-primary .section-videos a.uk-position-cover {
+  border-bottom: none !important;
+}
+
+.section-team .uk-grid > div {
+    width: 175px !important;
+}
+
+.uk-offcanvas-flip .uk-offcanvas-bar {
+    left: 0;
+    right: auto;
+}
+
+.uk-offcanvas-close {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    right: auto;
+}
+
+.card-post .uk-card-footer.dcr-footer {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.copyright a:hover, .footer .uk-subnav > .uk-active > a{
+  color: #fff;
+}
