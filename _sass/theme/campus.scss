@@ -12,14 +12,26 @@ body {
 
 .footer {
   background-color: #2C3547;
+  padding-bottom: 30px;
   img.eu {
     border: 1px solid $global-muted-color;
     // border-radius: 4px;
     // padding: 5px;
-    // width: 50px;
-    padding-left: 0;
+    margin-right: 15px;
+    max-width: 45px;
   }
 
+  img.cc, img.by {
+    max-width: 30px;
+  }
+
+  img.by {
+    margin-left:0px;
+  }
+
+  img.cc {
+    margin-left:15px;
+  }
 
 }
 
