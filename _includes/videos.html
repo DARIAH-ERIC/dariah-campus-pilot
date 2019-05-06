@@ -5,7 +5,7 @@ todo: what if we want to include a data source inside a post?
 
 {%- if page.videos -%}
     {% assign videos = page.videos %}
-    {% assign section = "uk-margin-remove-top section-videos" %}
+    {% assign section = "uk-margin-remove-top" %}
         {% if page.columns %}
             {% assign columns = page.columns %}
             {% if columns == '1' %}
@@ -27,7 +27,7 @@ todo: what if we want to include a data source inside a post?
 
 {%- if include.source -%}
   {% assign videos = include.source %}
-  {% assign section = "uk-section section-videos" %}
+  {% assign section = "uk-section" %}
   {% if include.columns %}
       {% assign columns = include.columns %}
       {% if columns == '1' %}
@@ -57,7 +57,7 @@ todo: what if we want to include a data source inside a post?
         <div class="uk-child-width-1-{{ columns }}@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid data-uk-lightbox>
         {% for item in videos %}
             <div>
-                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight">
+                <div class="uk-card uk-card-default uk-box-shadow-small uk-box-shadow-hover-medium uk-card-body uk-inline border-radius-large border-xlight video-card">
                     <a class="uk-position-cover" href="{{ item.url }}" data-caption="{{ item.title }}"></a>
                     {%- if item.img -%}
                     <div class="uk-card-media-top">

@@ -36,16 +36,25 @@ body {
 }
 
 @media (max-width: $breakpoint-medium) {
-  .uk-card-body {
+  .uk-card-body.in-masonry {
     padding: 30px 30px 20px 30px !important;
   }
 }
 
 
 
-.link-primary .section-videos a.uk-position-cover {
+.link-primary .section-videos a.uk-position-cover, .video-card a.uk-position-cover {
   border-bottom: none !important;
 }
+
+.uk-card.video-card{
+
+    padding-top: 30px !important;
+    padding-bottom: 0px !important;
+
+}
+
+
 
 .section-team .uk-grid > div {
     width: 175px !important;
