@@ -35,9 +35,13 @@ body {
   line-height: 2.5;
 }
 
-.uk-card-body {
-  padding: 30px 40px 20px 40px !important;
+@media (max-width: $breakpoint-medium) {
+  .uk-card-body {
+    padding: 30px 30px 20px 30px !important;
+  }
 }
+
+
 
 .link-primary .section-videos a.uk-position-cover {
   border-bottom: none !important;
