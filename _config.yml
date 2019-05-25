@@ -74,7 +74,7 @@ social:
 share:
     post:           true # Display share buttons on a post page
     doc:            true # Display share buttons on a doc page
-    twitter:        username # Enable by adding Twitter handle
+    twitter:        DARIAHeu # Enable by adding Twitter handle; change if we decide to have our own twitter account
     facebook:       true # Enable by setting true (Facebook handle not required)
 
 # Default footer image settings
