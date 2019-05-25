@@ -13,7 +13,7 @@ lang:               en
 baseurl:            ""
 
 # Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
-permalink:          /:title/
+permalink:          /:title
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                "https://dariah-eric.github.io"
