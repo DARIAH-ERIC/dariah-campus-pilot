@@ -4,19 +4,19 @@
   url: /
 
 - title: Resources
-  url: /resources/
+  url: /resources
 
 - title: Topics
-  url: /tags/
+  url: /tags
 
 - title: Sources
-  url: /sources/
+  url: /sources
 
 - title: Course Registry
-  url: /course-registry/
+  url: /course-registry
 
 - title: About
-  url: /docs/disclaimer/
+  url: /docs/disclaimer
 
 # - title: Changelog
 #   url: /changelog-timeline/
