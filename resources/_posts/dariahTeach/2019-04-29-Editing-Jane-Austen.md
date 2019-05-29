@@ -11,4 +11,3 @@ videos:
 ---
 
 This video features Kathryn Sutherland (Professor of Bibliography and Textual Criticism at the University of Oxford) talking about Jane Austen’s fiction manuscripts. This project brought together, in digital form, a manuscript collection originally scattered around the world, including transcripts, information about each manuscript, and a search facility.
-.
