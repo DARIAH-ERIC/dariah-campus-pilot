@@ -21,7 +21,8 @@ baseurl:            "/dariah-campus"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               dariah-campus.png
-og_logo:            dariah-campus-opengraph.png
+# This is temporary
+og_logo:            dariah-campus-flower.png
 
 navbar:
     sticky:         true
@@ -31,7 +32,7 @@ navbar:
 author:
     name:           DARIAH Campus
     title:          Editor
-    avatar:         dariah-campus-icon3.png
+    avatar:         dariah-campus-flower.png
 
 # Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
 authors:
