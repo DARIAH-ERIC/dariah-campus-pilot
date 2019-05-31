@@ -21,8 +21,9 @@ baseurl:            "/dariah-campus"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               dariah-campus.png
-# This is temporary
-og_logo:            dariah-campus-flower.png
+# This may be closer to the FB ratio, but it's too small;
+# check https://allfacebook.de/fbmarketing/og-tags-optimieren;
+og_logo:            dariah-campus-opengraph.png
 
 navbar:
     sticky:         true
