@@ -1,5 +1,7 @@
 # DARIAH-CAMPUS
 
+This is the pilot version of DARAIAH-CAMPUS which was based on Jekyll. It is no longer under development. We have since moved to MDX and Gatsby. The new repo is https://github.com/DARIAH-ERIC/dariah-campus/.
+
 ## GitHub Workflow
 
 ### Setting up DARIAH-CAMPUS on your computer
